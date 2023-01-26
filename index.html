@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/typography.css">
+        <link rel="stylesheet" href="./css/general.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/qc.slider.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./js/general.js" defer></script>
+        <script src="./js/jquery-3.6.3.min.js"></script>
+        <script src="./js/index.js" defer></script>
+        <script src="./js/qcslider.jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <a class="logo item" href="./index.html">Max Häggman</a>
+                <div class="nav-menu">
+                    <div class="menu-click"></div>
+                    <div class="hamburger-menu">
+                        <div class="hamburger-menu-line"></div>
+                        <div class="hamburger-menu-line"></div>
+                        <div class="hamburger-menu-line"></div>
+                    </div>
+                    <div class="nav-items-menu">
+                        <div class="nav-left">
+                            <div class="clickable-item menu-item my-projects">
+                                <h3>My projects</h3>
+                                <div class="sub-menu">
+                                    <a href="./html/all-projects.html" class="clickable-item sub-menu-item all-projects">
+                                        <h4>All Projects</h4>
+                                    </a>
+                                    <div class="clickable-item sub-menu-item projects-in-school">
+                                        <h4>Projects in School <i class="fa fa-angle-right"></i></h4>
+                                        <div class="sub-menu-item projects-in-school-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="clickable-item menu-item my-skills-btn" href="./html/my-skills.html">My skills</a>
+                        </div>
+                        <div class="nav-right">
+                            <a class="clickable-item menu-item contact-form-btn" href="./html/contact-form.html">Contact me</a>
+                            <a class="clickable-item menu-item about-btn" href="./html/about-me.html">About</a>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+        </header>
+        <main class="main-content main-content-section">
+            <section class="slide">
+                <div class="slider-container">
+                  <ul class="slider-wrapper" id="slider">
+                    <li class="slide-current">
+                        <a class="info-container slide-1" href="./assignment-1/html/home.html" target="_blank">
+                            <h3>Project name</h3>
+                            <p>Project description</p>
+                        </a>
+                      <!-- Image -->
+                      <img src="./images/backgrounds/a-green-website-background.png" alt="A Green Website"/>
+                      <!-- Image Description -->
+                    </li>
+                    <li class="slide">
+                        <a class="info-container slide-2" href="./assignment-2/hangman.html" target="_blank">
+                            <h3>Project name</h3>
+                            <p>Project description</p>
+                        </a>
+                        <!-- Image -->
+                        <img src="./images/backgrounds/hangman-background.png" alt="A Hangman Game"/>
+                        <!-- Image Description -->
+                      </li>
+                      <li class="slide">
+                        <a class="info-container slide-3" href="https://maxhaggmancmedu.github.io/Assignment-3/" target="_blank">
+                            <h3>Project name</h3>
+                            <p>Project description</p>
+                        </a>
+                        <!-- Image -->
+                        <img src="./images/backgrounds/tic-tac-toe-background.png" alt="A Tic tac toe game"/>
+                        <!-- Image Description -->
+                      </li>
+                  </ul>
+                  <!-- Nav controls -->
+                  <div class="drt-control control-left" id="lft-control"><</div>
+                  <div class="drt-control control-right" id="rht-control">></div>
+                  <ul class="slider-controls" id="slider-controls"></ul>
+                  <!-- Progressbar -->
+                  <!-- <div class="tempo-bar" id="barra"></div> -->
+                </div>
+            </section>  
+
+            <section class="profile-introduction">
+            <div class="profile-image">
+                <div class="head"></div>
+                <div class="body"></div>
+            </div>
+            <div class="about-me">
+                <h1>Hello! I'm Max, a Frontend / App developer from Stockholm, Sweden.</h1>
+                <div class="about-me-linkedin">
+                    <a class="to-about-me-page" href="./html/about-me.html">About me</a>
+                    <a class="linked-in-link" href="https://www.linkedin.com/in/max-h%C3%A4ggman-a192181b8/" target="_blank">
+                        <img src="./images/icons/LinkedIn-icon-grey-RGB.png" height="50px" width="auto">
+                    </a>
+                </div>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <h3>&#169; <span class="logo-text">Max Häggmans</span> portfolio 2023</h3>
+        </footer>
+    </body>
+</html>

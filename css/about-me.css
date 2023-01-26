@@ -1,0 +1,187 @@
+* {
+    color: var(--white-color);
+}
+
+.main-content, .img-container, .resume, .message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.main-content {
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.content {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 50%;
+}
+
+.content > * {
+    padding: 2em;
+}
+
+.content h3, 
+.content p {
+    text-align: center;
+}
+
+.content p {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.img-container {
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.linked-in {
+    border-radius: 50%;
+}
+
+.resume {
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resume p {
+    font-size: 1.6rem;
+}
+
+.read-my-cv {
+    background: var(--yellow-color);
+    border-radius: 10px;
+    color: var(--black-color);
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 8px 0;
+    padding: 1em 2em;
+    transition-duration: .3s;
+}
+
+.resume button:hover {
+    opacity: .7;
+}
+
+.message {
+    align-items: center;
+    background-color: #8B8000;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 44%;
+    width: 40%;
+    z-index: 100;
+}
+
+.message > * {
+    color: var(--black-color);
+}
+
+.message p {
+    padding: 10px 8px;
+    width: 90%;
+}
+
+.remove-message {
+    background-color: var(--black-color);
+    border-radius: 5px;
+    height: 40px;
+    left: -2%;
+    position: relative;
+    top: 0%;
+    transition-duration: .2s;
+    width: 40px;
+    z-index: 110;
+}
+
+.remove-message:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.remove-message:after {
+    bottom: 0;
+    color: var(--white-color);
+    content: "\d7";
+    font-size: 50px;
+    left: 5px;
+    line-height: 40px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.activate-message {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        width: auto;
+    }
+
+    .content p,
+    .resume p {
+        font-size: 1.5rem;
+    }
+
+    .resume p {
+        text-align: center;
+    }
+
+    .message p {
+        font-size: 1.3rem;
+    }
+
+    .message {
+        width: 60%;
+    }
+
+    .message {
+        top: 500px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 8px;
+    }
+
+    .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content h3 {
+        font-size: 1.6rem;
+    }
+
+    .img-container {
+        gap: 16px;
+        justify-content: center;
+    }
+  }

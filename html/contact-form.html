@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/typography.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/contact-form.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../js/general.js" defer></script>
+        <script src="../js/jquery-3.6.3.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <a class="logo item" href="../index.html">Max Häggman</a>
+                <div class="nav-menu">
+                    <div class="menu-click"></div>
+                    <div class="hamburger-menu">
+                        <div class="hamburger-menu-line"></div>
+                        <div class="hamburger-menu-line"></div>
+                        <div class="hamburger-menu-line"></div>
+                    </div>
+                    <div class="nav-items-menu">
+                        <div class="nav-left">
+                            <div class="clickable-item menu-item my-projects">
+                                <h3>My projects</h3>
+                                <div class="sub-menu">
+                                    <a href="all-projects.html" class="clickable-item sub-menu-item all-projects">
+                                        <h4>All Projects</h4>
+                                    </a>
+                                    <div class="clickable-item sub-menu-item projects-in-school">
+                                        <h4>Projects in School <i class="fa fa-angle-right"></i></h4>
+                                        <div class="sub-menu-item projects-in-school-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="clickable-item menu-item my-skills-btn" href="my-skills.html">My skills</a>
+                        </div>
+                        <div class="nav-right">
+                            <a class="clickable-item menu-item contact-form-btn" href="contact-form.html">Contact me</a>
+                            <a class="clickable-item menu-item about-btn" href="about-me.html">About</a>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+        </header>
+        <main class="content main-content-section">
+            <section class="main-content">
+                <h1>Contact me!</h1>
+                <p>If you have any questions or would like to get in touch, please send me a message. I'm always looking for new opportunities!</p>
+                <form action="mailto: max.haggman@edu.cmeducations.se" method="post" id="form">
+                <fieldset>
+                    <div class="form-item">
+                        <label for="first-name-and-last-name">Enter your name:</label>
+                        <input type="text" id="first-name-and-last-name" name="first-name-and-last-name" placeholder="Your first and last name" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="mail">Enter your email:</label>
+                        <input type="text" id="mail" name="mail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="message">Leave a message:</label>
+                        <textarea id="message" name="message" rows="5" cols="20" placeholder="Send me a message" required></textarea>
+                    </div>
+                    <button type="submit" form="form" value="Submit">Send</button>
+                </fieldset>
+            </section>
+        </main>
+        <footer>
+            <h3>&#169; <span class="logo-text">Max Häggmans</span> portfolio 2023</h3>
+        </footer>
+    </body>
+</html>

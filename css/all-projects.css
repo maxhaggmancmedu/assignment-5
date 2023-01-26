@@ -1,0 +1,133 @@
+.projects-container {
+    color: var(--black-color);
+    display: -ms-grid;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.project-item {
+    cursor: default;
+    max-height: 250px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.project-background {
+    background-color: var(--black-color);
+    display: none;
+    height: 250px;
+    position: absolute;
+    width: 509px;
+    z-index: 10;
+}
+
+.project-img {
+    border-radius: 10px;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    height: 250px;
+    width: auto;
+}
+
+.project-info {
+    align-items: center;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    max-width: max-content;
+    padding: 4px;
+    position: relative;
+    top: -62%;
+    transform: translate(-50%, 50%);
+    z-index: 20;
+}
+
+.project-name {
+    color: var(--black-color);
+    font-size: 2rem;
+    font-family: open-sans-bold;
+}
+
+.project-intro-text {
+    color: var(--white-color);
+    font-size: 12px;
+    text-align: center;
+    top: 35px;
+    width: 270px;
+}
+
+.project-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+    top: 75px;
+}
+
+.project-button:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition-duration: .5s;
+}
+
+.project-intro-text,
+.project-button {
+    display: none;
+    position: absolute;
+}
+
+.active {
+    display: block;
+    color: var(--white-color);
+}
+
+.add-white-color {
+    color: var(--white-color);
+}
+
+.remove-border-radius {
+    border-radius: 0;
+}
+
+@media screen and (max-width: 1150px) {
+    .projects-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .project-item,
+    .project-background,
+    .project-img {
+        height: 172px;
+        width: 350px;
+    }
+
+    .project-info {
+        top: -87%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .project-item,
+    .project-background,
+    .project-img {
+        height: 153px;
+        width: 312px;
+    }
+}
+
+

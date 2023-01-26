@@ -1,0 +1,183 @@
+.main {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main, .profile-introduction, .about-me-linkedin, .linked-in-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.slide-current > img,
+.slide > img {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+}
+
+.info-container {
+    border: 1px solid var(--black-color);
+    color: var(--black-color);
+    left: 50%;
+    padding: 2% 4%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: .15s;
+    z-index: 1000;
+}
+
+.info-container:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.info-container h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.info-container p {
+    font-size: 1.5rem;
+}
+
+.profile-introduction {
+    align-items: center;
+    color: var(--white-color);
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.profile-image {
+    background-color: var(--white-color);
+    border-radius: 50%;
+    height: 200px;
+    margin-right: 2em;
+    width: 200px;
+}
+
+.head {
+    border-radius: 50%;
+    height: 50px;
+    left: 50%;
+    top: 33%;
+    width: 50px;
+}
+
+.body {
+    border-radius: 50% 50% 0 0;
+    height: 50px;
+    left: 50%;
+    top: 34%;
+    width: 82px;
+}
+
+.head,
+.body {
+    background-color: var(--black-color);
+    position: relative;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.about-me-linkedin {
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: left;
+    margin-top: 2%;
+}
+
+.about-me {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.to-about-me-page {
+    background-color: var(--yellow-color);
+    border-radius: 10px;
+    color: var(--black-color);
+    cursor: pointer;
+    display: block;
+    left: 2%;
+    padding: 1em 2em;
+    position: relative;
+    text-decoration: none;
+    transition-duration: .3s;
+    width: fit-content;
+}
+
+.to-about-me-page:hover {
+    opacity: .7;
+}
+
+.linked-in-link {
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 902px) {
+    .profile-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    
+    .about-me h1,
+    .to-about-me-page {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .about-me {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .profile-introduction {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .about-me-linkedin {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .info-container {
+        width: 76%;
+    }
+
+    .info-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .info-container p {
+        font-size: 1.4rem;
+    }
+
+    .about-me h1 {
+        font-size: 1.4rem;
+        padding: 0 8px;
+    }
+}
+

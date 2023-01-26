@@ -1,0 +1,314 @@
+* {
+    color: var(--white-color);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.text-skills {
+    align-items: center;
+    justify-content: center;
+}
+
+.text-skills, .programming-languages, .other-programs, .program-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.text-skills p {
+    font-size: 1.5rem;
+    margin: 24px 0;
+    text-align: center;
+    width: max-content;
+}
+
+.content {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.programming-languages {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.programming-languages > h3,
+.other-programs > h3 {
+    font-size: 2.5rem;
+}
+
+.language-images {
+    display: -ms-grid;
+    display: grid;
+    gap: 34px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 36px 0;
+    text-align: center;
+}
+
+.language-images > img {
+    background-color: var(--yellow-color);
+    border-radius: 8px;
+    opacity: .5;
+    padding: 4px;
+}
+
+.language-logo,
+.program-logo {
+    height: 150px;
+    width: auto;
+}
+
+.other-programs {
+    flex-direction: column;
+    text-align: center;
+}
+
+.program-images {
+    align-items: center;
+    gap: 34px;
+    justify-content: center;
+    margin: 36px 0;
+}
+
+.language-container:nth-of-type(1),
+.language-container:nth-of-type(3) {
+    -webkit-animation: bounce-in-left 2s ease 1;
+    animation: bounce-in-left 2s ease 1;
+}
+
+@-webkit-keyframes bounce-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    80% { 
+      transform: translateX(10px);
+    }
+    100% { 
+      transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    80% { 
+      transform: translateX(10px);
+    }
+    100% { 
+      transform: translateY(0);
+    }
+}
+
+.language-container:nth-of-type(2) {
+    -webkit-animation: bounce-in-top 2s ease 1;
+    animation: bounce-in-top 2s ease 1;
+}
+
+@-webkit-keyframes bounce-in-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    80% { 
+      transform: translateY(10px); 
+    }
+    100% { 
+      transform: translateY(0); 
+    }
+}
+
+@keyframes bounce-in-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    80% { 
+      transform: translateY(10px); 
+    }
+    100% { 
+      transform: translateY(0); 
+    }
+}
+
+.language-container:nth-of-type(4) {
+    -webkit-animation: bounce-in-bottom 2s ease 1;
+    animation: bounce-in-bottom 2s ease 1;
+}
+
+@-webkit-keyframes bounce-in-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-30px);
+    }
+    80% { 
+      transform: translateY(-10px);
+    }
+    100% { 
+      transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(800px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-30px);
+    }
+    80% { 
+      transform: translateY(-10px);
+    }
+    100% { 
+      transform: translateY(0);
+    }
+}
+
+.program-container:nth-of-type(1) {
+    backface-visibility: visible !important;
+    -webkit-animation: flip 2s ease 1;
+    animation: flip 2s ease 1;
+}
+
+@-webkit-keyframes flip {
+    0% {
+      transform: perspective(400px) rotateY(0);
+      animation-timing-function: ease-out;
+    }
+    40% {
+      transform: perspective(400px) translateZ(150px) rotateY(170deg);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+      animation-timing-function: ease-in;
+    }
+    80% {
+      transform: perspective(400px) rotateY(360deg) scale(.95);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: perspective(400px) scale(1);
+      animation-timing-function: ease-in;
+    }
+}
+
+@keyframes flip {
+    0% {
+      transform: perspective(400px) rotateY(0);
+      animation-timing-function: ease-out;
+    }
+    40% {
+      transform: perspective(400px) translateZ(150px) rotateY(170deg);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+      animation-timing-function: ease-in;
+    }
+    80% {
+      transform: perspective(400px) rotateY(360deg) scale(.95);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: perspective(400px) scale(1);
+      animation-timing-function: ease-in;
+    }
+}
+
+.program-container:nth-of-type(2) {
+    -webkit-animation: bounce 2s ease 1;
+    animation: bounce 2s ease 1;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-40px);}
+    60% {transform: translateY(-20px);}
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-40px);}
+    60% {transform: translateY(-20px);}
+}
+
+@media screen and (max-width: 860px) {
+    .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+      margin-top: 8px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .text-skills p {
+      font-size: 1.3rem;
+    }
+
+    .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content p {
+      font-size: 1.3rem;
+    }
+    
+    .programming-languages > h3,
+    .other-programs > h3 {
+      font-size: 1.6rem;
+    }
+
+    .language-logo,
+    .program-logo {
+      height: 100px;
+    }
+}
