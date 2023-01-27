@@ -1,0 +1,191 @@
+.nav-button-home {
+    color: var(--fifth-color);
+    opacity: .7;
+}
+
+.nav-button-a-green-frog {
+    color: var(--white-color);
+}
+
+.nav-button-contact-form {
+    color: var(--white-color);
+}
+
+.left-side-grid {
+    grid-area: left-side-grid;
+}
+
+.main {
+    background-color: var(--main-color);
+}
+
+.main h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    padding: 16px;
+    text-align: center;
+}
+
+.hero > h2 {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    font-size: 2rem;
+    opacity: .5;
+}
+
+.hero {
+    align-items: center;
+    background-attachment: scroll;
+    background-color: var(--main-color);
+    background-image: url('../images/nature-copy.jpg');
+    background-position: top;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 48px;
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+
+.hero-button {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    color: var(--white-color);
+    font-size: 1.7rem;
+    margin-top: 24px;
+    opacity: .6;
+    padding: 16px 48px;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.hero-button:hover {
+    opacity: .9;
+}
+
+.main-content {
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+.main-text,
+.secondary-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.main-text h2,
+.secondary-text h2 {
+    align-items: center;
+    color: var(--fourth-color);
+    font-size: 2rem;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.main-text h2 {
+    font-size: 3rem;
+}
+
+.main-text p {
+    text-align: center;
+}
+
+.main-text p,
+.secondary-text p {
+    align-items: center;
+    color: var(--white-color);
+    display: block;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin: 0;
+    width: auto;
+}
+
+.secondary-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.secondary-text {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.secondary-text p {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.right-side-grid {
+    grid-area: right-side-grid;
+}
+
+.left-side-grid,
+.right-side-grid {
+    background-color: var(--main-color);
+}
+
+@media screen and (max-width: 1300px) {
+    .hero > h2
+     {
+        font-size: 1.5rem;
+    }
+
+    .hero > a {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .hero {
+        border-radius: 8px;
+    }
+
+    .hero > h2 {
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 12px;
+    }
+
+    .hero-button {
+        font-size: .9rem;
+        padding: 8px 16px;
+    }
+
+    .main-text,
+    .secondary-text {
+        width: 100%;
+    }
+
+    .main-text > h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-text > p {
+        font-size: 1.2rem;
+    }
+
+    .secondary-content {
+        flex-direction: column;
+    }
+
+    .secondary-text > h2 {
+        font-size: 1.4rem;
+        padding: 16px 0px;
+        text-align: left;
+    }
+
+    .secondary-text > p {
+        font-size: 1rem;
+    }
+}
+
+ 

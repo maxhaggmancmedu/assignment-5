@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/contact-form.css">
+        <link rel="stylesheet" href="../styles/general.css">
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <h1>Green colors</h1>
+        </header>
+        
+        <nav class="navigation">
+            <div class="nav-item">
+                <a class="nav-button-home" href="home.html">Home</a>
+            </div>
+            <div class="nav-line"></div>
+            <div class="nav-item">
+                <a class="nav-button-a-green-frog" href="a-green-frog.html">A Green Frog</a>
+            </div>
+            <div class="nav-line"></div>
+            <div class="nav-item">
+                <a class="nav-button-contact-form" href="contact-form.html">Contact Us</a>
+            </div>
+        </nav>
+
+        <div class="left-side-grid"></div>
+
+        <section class="main-content">
+            <h2>Contact us!</h2>
+            <form action="mailto: max.haggman@edu.cmeducations.se" method="post" id="form">
+            <fieldset>
+                <div class="form-item">
+                    <label for="first-name">Enter your first name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
+                </div>
+                <div class="form-item">
+                    <label for="last-name">Enter your last name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+                </div>
+                <div class="form-item">
+                    <label for="mail">Enter your email:</label>
+                    <input type="text" id="mail" name="mail" placeholder="Your Email" required>
+                </div>
+                <div class="form-item">
+                    <label for="message">Leave a message:</label>
+                    <textarea id="message" name="message" rows="5" cols="20" placeholder="Send us a message" required></textarea>
+                </div>
+                <button type="submit" form="form" value="Submit">Send</button>
+            </fieldset>
+        </section>
+
+        <div class="right-side-grid"></div>
+
+        <footer class="footer">
+            <h3>&#169; Max Häggmans website 2022 </h3>
+        </footer>
+    </body>
+</html>

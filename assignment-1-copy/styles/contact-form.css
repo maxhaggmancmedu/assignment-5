@@ -1,0 +1,129 @@
+.nav-button-home {
+    color: var(--white-color);
+}
+
+.nav-button-a-green-frog {
+    color: var(--white-color);
+}
+
+.nav-button-contact-form {
+    color: var(--fifth-color);
+    opacity: .7;
+}
+
+.left-side-grid {
+    grid-area: left-side-grid;
+}
+
+.main-content {
+    align-items: center;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    padding-top: 48px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+}
+
+fieldset {
+    align-items: center;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-item {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin: 8px;
+    width: 100%;
+}
+
+label {
+    margin: 8px;
+}
+
+#first-name,
+#last-name,
+#mail {
+    border: 2px solid var(--fourth-color);
+    border-radius: 5px;
+    font-family: Verdana;
+    margin-left: 8px;
+    margin-top: 8px;
+    padding: 8px;
+    width: 100%;
+}
+
+#first-name,
+#last-name,
+#mail,
+#message:focus {
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+#message {
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    font-family: Verdana, Tahoma, 'Lato', sans-serif; 
+    font-size: 1.5rem;
+    height: 150px;
+    margin-left: 8px;
+    margin-top: 8px;
+    padding: 12px 8px;
+    resize: none;
+    width: 100%;
+}
+
+button {
+    background-color: var(--fourth-color); 
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-left: 8px;
+    margin-top: 24px;
+    padding: 16px 100px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.right-side-grid {
+    grid-area: right-side-grid;
+}
+
+.left-side-grid,
+.right-side-grid {
+    background-color: var(--main-color);
+}
+
+@media screen and (max-width: 379px) {
+    .form-item {
+        margin: 8px 8px 8px 0px;
+    }
+
+    button {
+        margin-top: 42px;
+    }
+}

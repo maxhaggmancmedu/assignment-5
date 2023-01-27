@@ -1,0 +1,140 @@
+:root {
+    --main-color: #4D685A;
+    --secondary-color: #546D64;
+    --third-color: #3C896D;
+    --fourth-color: #4FB286;
+    --fifth-color: #50FFB1;
+    --white-color: #ffffff;
+}
+
+html {
+   font-family: Verdana, Tahoma, 'Lato', sans-serif; 
+   font-size: 10px;
+   height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+}
+
+.body {
+    display: grid;
+    grid-template: 2fr 1fr 14fr 2fr / 1fr 6fr 1fr;
+    grid-template-areas: "left-side-grid header right-side-grid" "left-side-grid navigation right-side-grid" "left-side-grid main right-side-grid" "left-side-grid footer right-side-grid"
+}
+
+.header {
+    align-items: center;
+    background-color: var(--main-color);
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--white-color);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.navigation {
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--fourth-color);
+    display: flex;
+    flex-direction: row;
+    grid-area: navigation;
+    justify-content: center;
+}
+
+.nav-item {
+    font-size: 2rem;
+    margin-left: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.nav-item > a {
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.nav-item > a:hover {
+    color: var(--fourth-color);
+}
+
+.nav-line {
+    background-color: var(--fifth-color);
+    height: 24px;
+    margin-left: 8px;
+    width: 1px;
+}
+
+.footer {
+    align-items: center;
+    background-color: var(--main-color);
+    border-top: 5px solid var(--fourth-color);
+    color: var(--white-color);
+    display: flex;
+    font-size: 2rem;
+    grid-area: footer;
+    justify-content: center;
+    margin-top: 64px;
+    padding: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 910px) {
+    .navigation {
+        display: flex;
+    }
+    
+    .nav-item {
+        padding: 8px 8px 12px 8px;
+    }
+    
+    .nav-item > a {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    footer > h3 {
+        font-size: 2rem;
+    }
+}    
+
+@media screen and (max-width: 379px) {
+    .navigation {
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .nav-item {
+        align-items: center;
+        padding: 0px;
+        display: flex;
+    }
+    
+    .nav-item > a {
+        font-size: 1rem;
+        margin-left: 0px;
+    }  
+
+    .nav-button-contact-form {
+        margin-right: 8px;
+    }
+
+    footer > h3 {
+        font-size: 1.5rem;
+    }
+}
+
+

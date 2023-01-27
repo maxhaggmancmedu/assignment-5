@@ -18,14 +18,14 @@ $(function () {
         "A Green Website",
         "a-green-website-background.png",
         "This project was finished after 4 weeks of me learning the basics of html and css!",
-        "../assignment-1/html/home.html"
+        "../assignment-1-copy/html/home.html"
     );
     
     let mySecondAssignment = new assignment (
         "Hangman Game",
         "hangman-background.png",
         "This was my first ever project in js! A hangman game using only prompts and alerts!",
-        "../assignment-2/hangman.html"
+        "../assignment-2-copy/hangman.html"
     );
     
     let myThirdAssignment = new assignment (
