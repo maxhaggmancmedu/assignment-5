@@ -51,7 +51,17 @@ $(function () {
         }); 
     } 
 
-    populateSlideShow();
+    populateSlideShow((".info-container.slide-1 h3"), (assignmentArray[0].name));
+    populateSlideShow((".info-container.slide-1 p"), (assignmentArray[0].introText));
+    populateSlideShow((".info-container.slide-2 h3"), (assignmentArray[1].name));
+    populateSlideShow((".info-container.slide-2 p"), (assignmentArray[1].introText));
+    populateSlideShow((".info-container.slide-3 h3"), (assignmentArray[2].name));
+    populateSlideShow((".info-container.slide-3 p"), (assignmentArray[2].introText));
+    
+
+    function populateSlideShow(div, value) {
+      $(div).text(value);
+    }
     
     function navMenu () {
       $(".projects-in-school").on({
@@ -59,15 +69,25 @@ $(function () {
           if ($(".projects-in-school-container").hasClass("display-flex")) {
             $(this).find(".projects-in-school-container").removeClass("display-flex").hide();
             $(this).removeClass("active-sub-menu-projects");
-            projectsInSchoolNotActive();
-            $(this).find("h4 i").removeClass("fa fa-angle-down");
-            $(this).find("h4 i").addClass("fa fa-angle-right");
+
+            SubMenuNotActive((".my-skills-btn"), ("my-skills-position-while-sub-menu-active"));
+            SubMenuNotActive((".main-content-section"), ("active-margin-top-while-projects-in-school-sub-menu-active"));
+            SubMenuNotActive((".nav-right"), ("nav-right-position-while-sub-menu-active"));
+            SubMenuNotActive((".sub-menu-item"), ("active-sub-menu-projects-in-school"));
+
+            SubMenuNotActive(("h4 i"), ("fa fa-angle-down"));
+            SubMenuActive(("h4 i"), ("fa fa-angle-right"));
           } else {
             $(this).find(".projects-in-school-container").slideDown().addClass("display-flex");
             $(this).addClass("active-sub-menu-projects");
-            projectsInSchoolActive();
-            $(this).find("h4 i").removeClass("fa fa-angle-right");
-            $(this).find("h4 i").addClass("fa fa-angle-down");
+
+            SubMenuActive((".my-skills-btn"), ("my-skills-position-while-sub-menu-active"));
+            SubMenuActive((".main-content-section"), ("active-margin-top-while-projects-in-school-sub-menu-active"));
+            SubMenuActive((".nav-right"), ("nav-right-position-while-sub-menu-active"));
+            SubMenuActive((".sub-menu-item"), ("active-sub-menu-projects-in-school"));
+
+            SubMenuNotActive(("h4 i"), ("fa fa-angle-right"));
+            SubMenuActive(("h4 i"), ("fa fa-angle-down"));
           }  
         }
       });
@@ -78,77 +98,61 @@ $(function () {
         } else {
           $(".sub-menu").show().addClass("let-sub-menu-display-block");
         }
+
         if ($(".sub-menu").hasClass("active-sub-menu")) {
-          SubMenuNotActive();
+          SubMenuNotActive((".sub-menu"), ("active-sub-menu"));
+          SubMenuNotActive((".projects-in-school"), ("active-sub-menu-projects projects-in-school-position"));
+          SubMenuNotActive((".my-skills-btn"), ("my-skills-position my-skills-position-while-sub-menu-active"));
+          SubMenuNotActive((".nav-right"), ("nav-right-position nav-right-position-while-sub-menu-active"));
+          SubMenuNotActive((".main-content-section"), ("sub-menu-active-margin-top active-margin-top-while-projects-in-school-sub-menu-active"));
+          SubMenuNotActive((".sub-menu-item"), ("active-sub-menu-projects-in-school display-flex"));
+
+          divHide(".projects-in-school-container");
         } else {
-          SubMenuActive();
+          SubMenuActive((".sub-menu"), ("active-sub-menu"));
+          SubMenuActive((".projects-in-school"), ("projects-in-school-position"));
+          $(".projects-in-school").show();
+          SubMenuActive((".my-skills-btn"), ("my-skills-position"));
+          SubMenuActive((".nav-right"), ("nav-right-position"));
+          SubMenuActive((".main-content-section"), ("sub-menu-active-margin-top"));
         }
       });
-
-      function projectsInSchoolNotActive() {
-        $(".my-skills-btn").removeClass("my-skills-position-while-sub-menu-active");
-        $(".main-content-section").removeClass("active-margin-top-while-projects-in-school-sub-menu-active");
-        $(".nav-right").removeClass("nav-right-position-while-sub-menu-active");
-        $(".sub-menu-item").removeClass("active-sub-menu-projects-in-school");
-      }
-  
-      function projectsInSchoolActive() {
-        $(".my-skills-btn").addClass("my-skills-position-while-sub-menu-active");
-        $(".main-content-section").addClass("active-margin-top-while-projects-in-school-sub-menu-active");
-        $(".nav-right").addClass("nav-right-position-while-sub-menu-active");
-        $(".sub-menu-item").addClass("active-sub-menu-projects-in-school");
-      }
-      
-      function SubMenuNotActive() {
-        $(".sub-menu").removeClass("active-sub-menu");
-        $(".projects-in-school").removeClass("active-sub-menu-projects projects-in-school-position");
-        $(".my-skills-btn").removeClass("my-skills-position my-skills-position-while-sub-menu-active");
-        $(".nav-right").removeClass("nav-right-position nav-right-position-while-sub-menu-active");
-        $(".main-content-section").removeClass("sub-menu-active-margin-top active-margin-top-while-projects-in-school-sub-menu-active");
-        $(".sub-menu-item").removeClass("active-sub-menu-projects-in-school display-flex");
-        $(".projects-in-school-container").hide();
-      }
-
-      function SubMenuActive() {
-        $(".sub-menu").addClass("active-sub-menu");
-        $(".projects-in-school").addClass("projects-in-school-position").show();
-        $(".my-skills-btn").addClass("my-skills-position");
-        $(".nav-right").addClass("nav-right-position");
-        $(".main-content-section").addClass("sub-menu-active-margin-top");
-      }
     }
-    
+
     function hamburgerMenu () {
       $(".hamburger-menu").on("click", function() {
         if ($(".nav-items-menu").hasClass("active-hamburger-menu")) {
-          $(".nav-items-menu").removeClass("active-hamburger-menu");
-          removeHamburgerMenuClasses();
+          SubMenuNotActive((".nav-items-menu"), ("active-hamburger-menu"));
+          SubMenuNotActive((".main-content-section"), ("active-margin-top sub-menu-active-margin-top active-margin-top-while-projects-in-school-sub-menu-active"));
+          SubMenuNotActive((".sub-menu"), ("active-sub-menu let-sub-menu-display-block"));
+          SubMenuNotActive((".sub-menu-item"), ("active-sub-menu-projects-in-school"));
+          SubMenuNotActive((".projects-in-school"), ("projects-in-school-position active-sub-menu-projects active-sub-menu-projects-in-school"));
+          SubMenuNotActive((".projects-in-school-container"), ("display-flex"));
+          SubMenuNotActive((".nav-right"), ("nav-right-position nav-right-position-while-sub-menu-active"));
+          SubMenuNotActive((".my-skills-btn"), ("my-skills-position my-skills-position-while-sub-menu-active"));
+
+          divHide(".sub-menu");
+          divHide(".projects-in-school");
+          divHide(".projects-in-school-container");
+          
         } else {
-          $(".nav-items-menu").addClass("active-hamburger-menu");
-          $(".main-content-section").addClass("active-margin-top");
+          SubMenuActive((".nav-items-menu"), ("active-hamburger-menu"));
+          SubMenuActive((".main-content-section"), ("active-margin-top"));
         }
-      });
-      
-      function removeHamburgerMenuClasses() {
-        $(".main-content-section").removeClass("active-margin-top sub-menu-active-margin-top active-margin-top-while-projects-in-school-sub-menu-active");
-        $(".sub-menu").removeClass("active-sub-menu let-sub-menu-display-block").hide();
-        $(".sub-menu-item").removeClass("active-sub-menu-projects-in-school");
-        $(".projects-in-school").removeClass("projects-in-school-position active-sub-menu-projects active-sub-menu-projects-in-school").hide();
-        $(".projects-in-school-container").removeClass("display-flex").hide();
-        $(".nav-right").removeClass("nav-right-position nav-right-position-while-sub-menu-active");
-        $(".my-skills-btn").removeClass("my-skills-position my-skills-position-while-sub-menu-active");
-      }
+      }); 
     }
 
-    function populateSlideShow() {
-      $(".info-container.slide-1 h3").text(assignmentArray[0].name);
-      $(".info-container.slide-1 p").text(assignmentArray[0].introText);
-      $(".info-container.slide-2 h3").text(assignmentArray[1].name);
-      $(".info-container.slide-2 p").text(assignmentArray[1].introText);
-      $(".info-container.slide-3 h3").text(assignmentArray[2].name);
-      $(".info-container.slide-3 p").text(assignmentArray[2].introText);
+    function SubMenuNotActive(div, divRemovedClass) {
+      $(div).removeClass(divRemovedClass);
     }
 
+    function SubMenuActive(div, divAddedClass) {
+      $(div).addClass(divAddedClass);
+    }
+
+    function divHide(div) {
+      $(div).hide();
+    }
 });
 
 
